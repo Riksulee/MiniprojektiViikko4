@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace MiniprojektiViikko4
 {
@@ -377,30 +378,24 @@ C) Valitset mustan poolopaidan ja taianomaisesti muutut boheemiksi helsinkiläise
 			return TarkistusABC(kirjain);
 		}
 
-		public string kirjasto()
+		public void kirjasto()
 		{
 			Console.WriteLine(tapahtumat[19].tapahtuma);
-			string kirjain = Console.ReadLine();
-			return TarkistusABC(kirjain);
 		}
-		public string EhtiminenMakkaratalolle()
+		public void EhtiminenMakkaratalolle()
 		{
 			Console.WriteLine(tapahtumat[20].tapahtuma);
 			string kirjain = Console.ReadLine();
-			return TarkistusABC(kirjain);
+			HaastatteluKyllaEi(kirjain);
 		}
 
-		public string MyöhästyminenMakkaratalolta()
+		public void MyöhästyminenMakkaratalolta()
 		{
 			Console.WriteLine(tapahtumat[23].tapahtuma);
-			string kirjain = Console.ReadLine();
-			return TarkistusABC(kirjain);
 		}
-		public string bussimatka()
+		public void bussimatka()
 		{
 			Console.WriteLine(tapahtumat[24].tapahtuma);
-			string kirjain = Console.ReadLine();
-			return TarkistusABC(kirjain);
 		}
 		public string GeregMyöhästyy()
 		{
@@ -408,23 +403,17 @@ C) Valitset mustan poolopaidan ja taianomaisesti muutut boheemiksi helsinkiläise
 			string kirjain = Console.ReadLine();
 			return TarkistusAB(kirjain);
 		}
-		public string GeregEiSaavu()
+		public void GeregEiSaavu()
 		{
 			Console.WriteLine(tapahtumat[26].tapahtuma);
-			string kirjain = Console.ReadLine();
-			return TarkistusABC(kirjain);
 		}
-		public string SiltsunPalkkio()
+		public void SiltsunPalkkio()
         {
             Console.WriteLine(tapahtumat[27].tapahtuma);
-            string kirjain = Console.ReadLine();
-            return TarkistusABC(kirjain);
 		}
-        public string HuumeidenMyynti()
+        public void HuumeidenMyynti()
         {
             Console.WriteLine(tapahtumat[28].tapahtuma);
-            string kirjain = Console.ReadLine();
-            return TarkistusABC(kirjain);
         }
 
 
@@ -502,5 +491,10 @@ C) Valitset mustan poolopaidan ja taianomaisesti muutut boheemiksi helsinkiläise
 
 			}
 		}
-	}
+        public void LisääAikaa()
+        {
+            Thread.Sleep(500);
+            Console.Clear();
+        }
+    }
 }

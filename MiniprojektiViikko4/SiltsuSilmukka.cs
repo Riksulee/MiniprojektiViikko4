@@ -10,13 +10,15 @@ namespace MiniprojektiViikko4
 		public void SiltsuSilmukkaMetodi(Peli peli)
 		{
 
-			//Siltsu tulee vastaan
+            //Siltsu tulee vastaan
+            peli.LisääAikaa();
 			string siltsu = peli.TörmäysSiltsuun();
 			//tarina 8, haara a, siskon luo
 			if (siltsu == "a" || siltsu == "A")
 			{
-				//tarina 11, poliisit, haarat A, B, C kaikki vievät putkaan
-				string putka = peli.Putka();
+                //tarina 11, poliisit, haarat A, B, C kaikki vievät putkaan
+                peli.LisääAikaa();
+                string putka = peli.Putka();
 
 				if (putka == "a" || putka == "A" || putka == "b" || putka == "B" || putka == "c" || putka == "C")
 				{
@@ -28,8 +30,8 @@ namespace MiniprojektiViikko4
 			else if (siltsu == "b" || siltsu == "B")
 			{
 
-				//tarina 10, haarat A, B
-
+                //tarina 10, haarat A, B
+                peli.LisääAikaa();
 				string rav = peli.Ravintola();
 
 				// falafelin tilaus
@@ -42,12 +44,14 @@ namespace MiniprojektiViikko4
 				else if (rav == "b" || rav == "B")
 				{
 
-					//Tarina13, haarat A, B, C
+                    //Tarina13, haarat A, B, C
+                    peli.LisääAikaa();
 					string huu = peli.Huumeet();
 					// Yhteys siltsuun
 					if (huu == "a" || huu == "A")
 					{
-						// tarina14, haarat A, B
+                        // tarina14, haarat A, B
+                        peli.LisääAikaa();
 						string rpl = peli.SiltsunRepunPalautus();
 						//kävellen tai raitiovaunulla työhaastatteluun
 						if (rpl == "a" || rpl == "A" || rpl == "b" || rpl == "B")

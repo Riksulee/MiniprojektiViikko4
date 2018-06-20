@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace MiniprojektiViikko4
 {
@@ -8,12 +9,12 @@ namespace MiniprojektiViikko4
     {
         public void PortfolioPuu(Peli peli)
         {
+            peli.LisääAikaa();
             string portfolio = peli.Portfolio();
 
-            if (portfolio == "a" || portfolio == "A")
+            if ((portfolio == "a" || portfolio == "A") && (peli.reppu.tavarat.Count(t=>t.Nimi == "matkakortti") == 1))
             {
-                //Jatkaa matkaa ratikalle.
-
+				peli.EhtiminenMakkaratalolle();
 
             }
             else if (portfolio=="b"|| portfolio == "B")
