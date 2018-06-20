@@ -14,7 +14,7 @@ namespace MiniprojektiViikko4
 
 			var ruokaindeksi = 0;
 			Peli peli = new Peli();
-			var jartsa = new SiltsuSilmukka();
+			var jartsa = new SiltsuSilmukka();  
 
 
 			//Tässä lähetään tarinaan
