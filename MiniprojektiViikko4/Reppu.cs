@@ -21,7 +21,6 @@ namespace MiniprojektiViikko4
 
         public string PoistaTavara(string nimi)
         {
-            //return tavarat.Remove(tavara);
 
             for (int i = 0; i < tavarat.Count; i++)
             {
@@ -33,6 +32,7 @@ namespace MiniprojektiViikko4
             }
             return "Kyseistä tuotetta ei ole repussa";
         }
+
 
         public void RepunSisalto()
         {

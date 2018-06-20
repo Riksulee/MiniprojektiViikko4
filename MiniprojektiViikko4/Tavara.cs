@@ -22,6 +22,7 @@ namespace MiniprojektiViikko4
             Paino = 0;            
 
         }
+        
 		public override string ToString()
 		{
 			return "Tavara: " + Nimi + " ja tavaran paino: " + Paino;
